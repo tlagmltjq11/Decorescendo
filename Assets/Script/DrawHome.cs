@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.XR;
-
+using UnityEngine.SceneManagement;
 public class DrawHome : MonoBehaviour
 {
     #region field
@@ -15,12 +15,15 @@ public class DrawHome : MonoBehaviour
     Ray m_ray; //광선을 나타내는 변수
     RaycastHit m_rayHit; //충돌을 나타내는 변수
     Vector3 m_pos;
-
-    Vector2[] m_vect = new Vector2[50];
+    
+    List<Vector2> m_vectList = new List<Vector2>();
 
     GameObject m_wallClone;
     int m_wallCnt = 0;
-    int m_vectCnt = 0;
+    int m_polyCnt = 0;
+
+    bool m_isHorizon;
+    bool m_isVertical;
 
     [SerializeField]
     GameObject m_UIevent;
@@ -57,6 +60,49 @@ public class DrawHome : MonoBehaviour
         }
 
         m_wallCnt = 0;
+    }
+
+    public void CreateFloor()
+    {
+        GameObject poly = new GameObject("Poly" + m_polyCnt);
+        var vertices2D = m_vectList.ToArray<Vector2>();
+        //var vertices3D = System.Array.ConvertAll<Vector2, Vector3>(vertices2D, v => v);
+        var vertices3D = System.Array.ConvertAll<Vector2, Vector3>(vertices2D, v => new Vector3(v.x, 0.01f, v.y));
+        // Use the triangulator to get indices for creating triangles
+        var triangulator = new Triangulator(vertices2D);
+
+        var indices = triangulator.Triangulate();
+
+        // Generate a color for each vertex
+        var colors = Enumerable.Range(0, vertices3D.Length)
+            .Select(i => Random.ColorHSV())
+            .ToArray();
+
+        // Create the mesh
+        var mesh = new Mesh
+        {
+            vertices = vertices3D,
+            triangles = indices,
+            colors = colors
+        };
+
+        mesh.RecalculateNormals();
+        mesh.RecalculateBounds();
+
+        // Set up game object with mesh;
+        var meshRenderer = poly.AddComponent<MeshRenderer>();
+        meshRenderer.material = new Material(Shader.Find("DoubleSided"));
+
+        var filter = poly.AddComponent<MeshFilter>();
+        filter.mesh = mesh;
+
+        BoxCollider bc = poly.AddComponent<BoxCollider>();
+        bc.isTrigger = true;
+        PolyController pc = poly.AddComponent<PolyController>();
+        pc.SetPoly(m_vectList, poly.name);
+
+        m_polyCnt++;
+        m_vectList.Clear();
     }
 
     #endregion
@@ -110,16 +156,20 @@ public class DrawHome : MonoBehaviour
             if (Camera.main.GetComponent<CameraController>().IsDrag() != true)
             {
                 m_pos = GetTouchedPos();
+                m_isHorizon = false;
+                m_isVertical = false;
 
                 if (CalculateAngle(prevPos, m_pos) == 9999f || (CalculateAngle(prevPos, m_pos) < 5f && CalculateAngle(prevPos, m_pos) > 0.111f) || (CalculateAngle(prevPos, m_pos) > 355f && CalculateAngle(prevPos, m_pos) < 359.999f))
                 {
                     m_pos = new Vector3(m_pos.x, m_pos.y, prevPos.z);
                     wall.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+                    m_isHorizon = true;
                 }
                 else if (CalculateAngle(prevPos, m_pos) == 0f || (CalculateAngle(prevPos, m_pos) > 85f && CalculateAngle(prevPos, m_pos) < 89.999f) || (CalculateAngle(prevPos, m_pos) < 275f && CalculateAngle(prevPos, m_pos) > 270.111f))
                 {
                     m_pos = new Vector3(prevPos.x, m_pos.y, m_pos.z);
                     wall.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+                    m_isVertical = true;
                 }
                 else
                 {
@@ -135,46 +185,6 @@ public class DrawHome : MonoBehaviour
         }
     }
 
-    public void CreateFloor()
-    {
-        GameObject poly = new GameObject("Poly");
-        var vertices2D = m_vect;
-        //var vertices3D = System.Array.ConvertAll<Vector2, Vector3>(vertices2D, v => v);
-        var vertices3D = System.Array.ConvertAll<Vector2, Vector3>(vertices2D, v => new Vector3(v.x, 0.01f, v.y));
-        // Use the triangulator to get indices for creating triangles
-        var triangulator = new Triangulator(vertices2D);
-        
-        var indices = triangulator.Triangulate();
-
-        // Generate a color for each vertex
-        var colors = Enumerable.Range(0, vertices3D.Length)
-            .Select(i => Random.ColorHSV())
-            .ToArray();
-
-        // Create the mesh
-        var mesh = new Mesh
-        {
-            vertices = vertices3D,
-            triangles = indices,
-            colors = colors
-        };
-
-        mesh.RecalculateNormals();
-        mesh.RecalculateBounds();
-
-        // Set up game object with mesh;
-        var meshRenderer = poly.AddComponent<MeshRenderer>();
-        meshRenderer.material = new Material(Shader.Find("DoubleSided"));
-
-        var filter = poly.AddComponent<MeshFilter>();
-        filter.mesh = mesh;
-
-        for (int i = 0; i < m_vect.Length; i++)
-        {
-            m_vect[i] = new Vector2(0, 0);
-        }
-    }
-
     void DrawWall()
     {
         if (Input.GetMouseButtonDown(0))
@@ -182,10 +192,44 @@ public class DrawHome : MonoBehaviour
             if (!EventSystem.current.IsPointerOverGameObject())
             {
                 StopAllCoroutines();
-                m_pos = GetTouchedPos();
-                m_vect[m_vectCnt] = new Vector2(m_pos.x, m_pos.z);
 
-                m_vectCnt++;
+                m_pos = GetTouchedPos();
+
+                //만약 벽의 각도가 90도 혹은 180도라면 현재 찍은 좌표를 이전에 찍은 좌표에 벽의 길이만큼을 더해준 좌표로 지정한다.
+                if (m_isHorizon)
+                {
+                    Debug.Log(m_wallCnt);
+                    Vector3 prevPos = GameObject.Find("wall" + m_wallCnt).transform.position;
+                    float dir = m_pos.x - prevPos.x;
+
+                    if(dir > 0)
+                    {   
+                        //0.05f 를 더해주는것은 그냥 좌표 보정용
+                        m_pos = new Vector3(prevPos.x + dir - 0.05f, 0f, prevPos.z);
+                    }
+                    else
+                    {
+                        m_pos = new Vector3(prevPos.x + dir + 0.05f, 0f, prevPos.z);
+                    }
+                }
+                else if(m_isVertical)
+                {
+                    Vector3 prevPos = GameObject.Find("wall" + m_wallCnt).transform.position;
+                    float dir = m_pos.z - prevPos.z;
+                    
+                    if (dir > 0)
+                    {
+                        //0.05f 를 더해주는것은 그냥 좌표 보정용
+                        m_pos = new Vector3(prevPos.x, 0f, prevPos.z + dir - 0.05f);
+                    }
+                    else
+                    {
+                        m_pos = new Vector3(prevPos.x, 0f, prevPos.z + dir + 0.05f);
+                    }
+                }
+                
+                m_vectList.Add(new Vector2(m_pos.x, m_pos.z));
+                
                 m_wallCnt++;
 
                 m_wallClone = Instantiate(m_wallPrefab) as GameObject;
@@ -203,9 +247,11 @@ public class DrawHome : MonoBehaviour
                 StopAllCoroutines();
                 Destroy(m_wallClone);
                 m_wallCnt--;
-                
-                this.enabled = false;
+
+                m_isHorizon = false;
+                m_isVertical = false;
                 m_UIevent.GetComponent<ButtonEvent>().ButtonsEnable();
+                this.enabled = false;
             }
         }
     }
