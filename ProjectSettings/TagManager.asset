@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
+  - Floor
+  - furniture
   layers:
   - Default
   - TransparentFX
@@ -15,8 +17,8 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
+  - Floor
+  - Wall
   - 
   - 
   - 

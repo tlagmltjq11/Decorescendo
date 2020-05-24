@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Capston",
+"productVersion": "0.2",
+"dataUrl": "web10.data.unityweb",
+"wasmCodeUrl": "web10.wasm.code.unityweb",
+"wasmFrameworkUrl": "web10.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.3.6f1"
+}

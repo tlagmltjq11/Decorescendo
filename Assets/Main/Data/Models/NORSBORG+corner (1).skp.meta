@@ -1,0 +1,214 @@
+fileFormatVersion: 2
+guid: 842ddc5563a4e9a46aef9753114bf5c8
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b000000
+  assetHash:
+    serializedVersion: 2
+    Hash: df62cedc5e0725afc8979be61b7263de
+  longitude: -105.242139
+  latitude: 40.018309
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 5.3024035, y: 3.3905094, z: -4.912551}
+      lookAt: {x: 3.786925, y: 2.263975, z: -3.0815842}
+      up: {x: -0.27309123, y: 0.9036366, z: 0.32994258}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Group 1
+    100002: Group 20
+    100004: Group 34
+    100006: noha
+    100008: noha 1
+    100010: noha 2
+    100012: noha 3
+    100014: noha 4
+    100016: noha 5
+    100018: noha 6
+    100020: //RootNode
+    100022: NORSBORGcorner
+    100024: operka
+    100026: operka 1
+    100028: polstar sedak
+    100030: polstar sedak#1
+    100032: polstar sedak#2
+    100034: ram lenoska
+    100036: ram sedak
+    100038: sedak
+    100040: sedak dlhy
+    100042: sedak#1
+    100044: zada
+    100046: "\uADF8\uB8F9#5"
+    400000: Group 1
+    400002: Group 20
+    400004: Group 34
+    400006: noha
+    400008: noha 1
+    400010: noha 2
+    400012: noha 3
+    400014: noha 4
+    400016: noha 5
+    400018: noha 6
+    400020: //RootNode
+    400022: NORSBORGcorner
+    400024: operka
+    400026: operka 1
+    400028: polstar sedak
+    400030: polstar sedak#1
+    400032: polstar sedak#2
+    400034: ram lenoska
+    400036: ram sedak
+    400038: sedak
+    400040: sedak dlhy
+    400042: sedak#1
+    400044: zada
+    400046: "\uADF8\uB8F9#5"
+    2100000: Finnsta dark grey
+    2100002: birch
+    2300000: Group 20
+    2300002: Group 34
+    2300004: noha
+    2300006: noha 1
+    2300008: noha 2
+    2300010: noha 3
+    2300012: noha 4
+    2300014: noha 5
+    2300016: noha 6
+    2300018: operka
+    2300020: operka 1
+    2300022: polstar sedak
+    2300024: polstar sedak#1
+    2300026: polstar sedak#2
+    2300028: ram lenoska
+    2300030: ram sedak
+    2300032: sedak
+    2300034: sedak dlhy
+    2300036: sedak#1
+    2300038: zada
+    3300000: Group 20
+    3300002: Group 34
+    3300004: noha
+    3300006: noha 1
+    3300008: noha 2
+    3300010: noha 3
+    3300012: noha 4
+    3300014: noha 5
+    3300016: noha 6
+    3300018: operka
+    3300020: operka 1
+    3300022: polstar sedak
+    3300024: polstar sedak#1
+    3300026: polstar sedak#2
+    3300028: ram lenoska
+    3300030: ram sedak
+    3300032: sedak
+    3300034: sedak dlhy
+    3300036: sedak#1
+    3300038: zada
+    4300000: Mesh polstar sedak
+    4300002: Mesh polstar sedak#1
+    4300004: Mesh noha
+    4300006: Mesh ram sedak
+    4300008: Mesh ram lenoska
+    4300010: Mesh operka
+    4300012: Mesh Group 20
+    4300014: Mesh sedak dlhy
+    4300016: Mesh zada
+    4300018: Mesh polstar sedak#2
+    4300020: Mesh sedak
+    4300022: Mesh noha
+    4300024: Mesh sedak#1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

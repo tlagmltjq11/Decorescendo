@@ -19,8 +19,7 @@ Shader "High Quality Bricks & Walls/brick-957823" {
             Tags {
                 "LightMode"="ForwardBase"
             }
-            
-            
+            Cull off
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag

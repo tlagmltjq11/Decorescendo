@@ -1,0 +1,335 @@
+fileFormatVersion: 2
+guid: 131ad2f2cc07de04c8450c5a7781dcd1
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f0000006000000061000000620000006300000064000000650000006600000067000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 893f8824b81343595bec8afac32bb0c1
+  longitude: -105.242139
+  latitude: 40.018309
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -5.9289603, y: 2.2385445, z: -2.3936946}
+      lookAt: {x: -1.7881838, y: 0.724948, z: -0.8884279}
+      up: {x: 0.30535161, y: 0.94574785, z: 0.11100227}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: noha
+    100002: noha 1
+    100004: noha 10
+    100006: noha 11
+    100008: noha 12
+    100010: noha 13
+    100012: noha 14
+    100014: noha 15
+    100016: noha 16
+    100018: noha 17
+    100020: noha 18
+    100022: noha 19
+    100024: noha 2
+    100026: noha 3
+    100028: noha 4
+    100030: noha 5
+    100032: noha 6
+    100034: noha 7
+    100036: noha 8
+    100038: noha 9
+    100040: opierka
+    100042: opierka 1
+    100044: polstar sedak
+    100046: polstar sedak 1
+    100048: polstar sedak 2
+    100050: polstar sedak 3
+    100052: polstar sedak#1
+    100054: polstar sedak#1 1
+    100056: polstar sedak#3
+    100058: ram sedak
+    100060: ram sedak 1
+    100062: ram sedak 2
+    100064: ram sedak 3
+    100066: ram sedak#1
+    100068: sedak
+    100070: sedak 1
+    100072: sedak 2
+    100074: sedak 3
+    100076: sedak dlhy
+    100078: sedak#1
+    100080: sedak#1 1
+    100082: vankus roh
+    100084: vilma 1-sedacka
+    100086: vilma 2-sedacka
+    100088: vilma 2-sedacka 1
+    100090: vilma lezadlo
+    100092: vilma roh
+    100094: vilme
+    100096: //RootNode
+    100098: zada
+    100100: zada 1
+    100102: zada 2
+    100104: zada#1
+    100106: zada#2
+    100108: zada#2 1
+    100110: "\uADF8\uB8F9#1"
+    400000: noha
+    400002: noha 1
+    400004: noha 10
+    400006: noha 11
+    400008: noha 12
+    400010: noha 13
+    400012: noha 14
+    400014: noha 15
+    400016: noha 16
+    400018: noha 17
+    400020: noha 18
+    400022: noha 19
+    400024: noha 2
+    400026: noha 3
+    400028: noha 4
+    400030: noha 5
+    400032: noha 6
+    400034: noha 7
+    400036: noha 8
+    400038: noha 9
+    400040: opierka
+    400042: opierka 1
+    400044: polstar sedak
+    400046: polstar sedak 1
+    400048: polstar sedak 2
+    400050: polstar sedak 3
+    400052: polstar sedak#1
+    400054: polstar sedak#1 1
+    400056: polstar sedak#3
+    400058: ram sedak
+    400060: ram sedak 1
+    400062: ram sedak 2
+    400064: ram sedak 3
+    400066: ram sedak#1
+    400068: sedak
+    400070: sedak 1
+    400072: sedak 2
+    400074: sedak 3
+    400076: sedak dlhy
+    400078: sedak#1
+    400080: sedak#1 1
+    400082: vankus roh
+    400084: vilma 1-sedacka
+    400086: vilma 2-sedacka
+    400088: vilma 2-sedacka 1
+    400090: vilma lezadlo
+    400092: vilma roh
+    400094: vilme
+    400096: //RootNode
+    400098: zada
+    400100: zada 1
+    400102: zada 2
+    400104: zada#1
+    400106: zada#2
+    400108: zada#2 1
+    400110: "\uADF8\uB8F9#1"
+    2100000: Vilme
+    2100002: noha vilma
+    2300000: noha
+    2300002: noha 1
+    2300004: noha 10
+    2300006: noha 11
+    2300008: noha 12
+    2300010: noha 13
+    2300012: noha 14
+    2300014: noha 15
+    2300016: noha 16
+    2300018: noha 17
+    2300020: noha 18
+    2300022: noha 19
+    2300024: noha 2
+    2300026: noha 3
+    2300028: noha 4
+    2300030: noha 5
+    2300032: noha 6
+    2300034: noha 7
+    2300036: noha 8
+    2300038: noha 9
+    2300040: opierka
+    2300042: opierka 1
+    2300044: polstar sedak
+    2300046: polstar sedak 1
+    2300048: polstar sedak 2
+    2300050: polstar sedak 3
+    2300052: polstar sedak#1
+    2300054: polstar sedak#1 1
+    2300056: polstar sedak#3
+    2300058: ram sedak
+    2300060: ram sedak 1
+    2300062: ram sedak 2
+    2300064: ram sedak 3
+    2300066: ram sedak#1
+    2300068: sedak
+    2300070: sedak 1
+    2300072: sedak 2
+    2300074: sedak 3
+    2300076: sedak dlhy
+    2300078: sedak#1
+    2300080: sedak#1 1
+    2300082: vankus roh
+    2300084: zada
+    2300086: zada 1
+    2300088: zada 2
+    2300090: zada#1
+    2300092: zada#2
+    2300094: zada#2 1
+    3300000: noha
+    3300002: noha 1
+    3300004: noha 10
+    3300006: noha 11
+    3300008: noha 12
+    3300010: noha 13
+    3300012: noha 14
+    3300014: noha 15
+    3300016: noha 16
+    3300018: noha 17
+    3300020: noha 18
+    3300022: noha 19
+    3300024: noha 2
+    3300026: noha 3
+    3300028: noha 4
+    3300030: noha 5
+    3300032: noha 6
+    3300034: noha 7
+    3300036: noha 8
+    3300038: noha 9
+    3300040: opierka
+    3300042: opierka 1
+    3300044: polstar sedak
+    3300046: polstar sedak 1
+    3300048: polstar sedak 2
+    3300050: polstar sedak 3
+    3300052: polstar sedak#1
+    3300054: polstar sedak#1 1
+    3300056: polstar sedak#3
+    3300058: ram sedak
+    3300060: ram sedak 1
+    3300062: ram sedak 2
+    3300064: ram sedak 3
+    3300066: ram sedak#1
+    3300068: sedak
+    3300070: sedak 1
+    3300072: sedak 2
+    3300074: sedak 3
+    3300076: sedak dlhy
+    3300078: sedak#1
+    3300080: sedak#1 1
+    3300082: vankus roh
+    3300084: zada
+    3300086: zada 1
+    3300088: zada 2
+    3300090: zada#1
+    3300092: zada#2
+    3300094: zada#2 1
+    4300000: Mesh opierka
+    4300002: Mesh noha
+    4300004: Mesh sedak
+    4300006: Mesh ram sedak
+    4300008: Mesh sedak#1
+    4300010: Mesh polstar sedak
+    4300012: Mesh polstar sedak#1
+    4300014: Mesh zada
+    4300016: Mesh ram sedak#1
+    4300018: Mesh zada#1
+    4300020: Mesh sedak dlhy
+    4300022: Mesh polstar sedak#3
+    4300024: Mesh zada#2
+    4300026: Mesh vankus roh
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
