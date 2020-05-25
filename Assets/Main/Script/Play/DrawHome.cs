@@ -101,55 +101,58 @@ public class DrawHome : MonoBehaviour
 
     public void CreateFloor()
     {
-        GameObject poly = new GameObject("Poly" + m_polyCnt);
-        poly.tag = "Floor";
-        poly.layer = 9;
-
-        poly.transform.parent = GameObject.Find("Polys").transform;
-
-        var vertices2D = m_vectList.ToArray<Vector2>();
-        //var vertices3D = System.Array.ConvertAll<Vector2, Vector3>(vertices2D, v => v);
-        var vertices3D = System.Array.ConvertAll<Vector2, Vector3>(vertices2D, v => new Vector3(v.x, 0.01f, v.y));
-
-        // Use the triangulator to get indices for creating triangles
-        var triangulator = new Triangulator(vertices2D);
-
-        var indices = triangulator.Triangulate();
-
-        // Generate a color for each vertex
-        var colors = Enumerable.Range(0, vertices3D.Length)
-            .Select(i => Random.ColorHSV())
-            .ToArray();
-
-        // Create the mesh
-        var mesh = new Mesh
+        if (m_vectList.Count != 0)
         {
-            vertices = vertices3D,
-            triangles = indices,
-            colors = colors
-        };
+            GameObject poly = new GameObject("Poly" + m_polyCnt);
+            poly.tag = "Floor";
+            poly.layer = 9;
 
-        mesh.SetUVs(0, vertices2D);
+            poly.transform.parent = GameObject.Find("Polys").transform;
 
-        mesh.RecalculateNormals();
-        mesh.RecalculateBounds();
+            var vertices2D = m_vectList.ToArray<Vector2>();
+            //var vertices3D = System.Array.ConvertAll<Vector2, Vector3>(vertices2D, v => v);
+            var vertices3D = System.Array.ConvertAll<Vector2, Vector3>(vertices2D, v => new Vector3(v.x, 0.01f, v.y));
 
-        // Set up game object with mesh;
-        var meshRenderer = poly.AddComponent<MeshRenderer>();
-        meshRenderer.material = new Material(Resources.Load("DoubleSided") as Shader);
+            // Use the triangulator to get indices for creating triangles
+            var triangulator = new Triangulator(vertices2D);
 
-        var filter = poly.AddComponent<MeshFilter>();
-        filter.mesh = mesh;
+            var indices = triangulator.Triangulate();
 
-        BoxCollider bc = poly.AddComponent<BoxCollider>();
-        bc.isTrigger = true;
-        PolyController pc = poly.AddComponent<PolyController>();
-        pc.SetVect(m_vectList);
-        
-        m_polyCnt++;
-        m_vectList.Clear();
+            // Generate a color for each vertex
+            var colors = Enumerable.Range(0, vertices3D.Length)
+                .Select(i => Random.ColorHSV())
+                .ToArray();
 
-        PolyWallManager.Instance.AddPoly(pc);
+            // Create the mesh
+            var mesh = new Mesh
+            {
+                vertices = vertices3D,
+                triangles = indices,
+                colors = colors
+            };
+
+            mesh.SetUVs(0, vertices2D);
+
+            mesh.RecalculateNormals();
+            mesh.RecalculateBounds();
+
+            // Set up game object with mesh;
+            var meshRenderer = poly.AddComponent<MeshRenderer>();
+            meshRenderer.material = Resources.Load("Materials/DoubleSided") as Material;
+
+            var filter = poly.AddComponent<MeshFilter>();
+            filter.mesh = mesh;
+
+            BoxCollider bc = poly.AddComponent<BoxCollider>();
+            bc.isTrigger = true;
+            PolyController pc = poly.AddComponent<PolyController>();
+            pc.SetVect(m_vectList);
+
+            m_polyCnt++;
+            m_vectList.Clear();
+
+            PolyWallManager.Instance.AddPoly(pc);
+        }
     }
 
     #endregion

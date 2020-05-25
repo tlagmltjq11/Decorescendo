@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: brick-957823
-  m_Shader: {fileID: 4800000, guid: f85588a58308f22418dcef2ef3119888, type: 3}
+  m_Shader: {fileID: 4800000, guid: f40adcf4d401094468dc79ae25280d41, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0

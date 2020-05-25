@@ -1,0 +1,272 @@
+fileFormatVersion: 2
+guid: 0650a0c74fe243243b3813c10c4d6b0c
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f0000004000000041000000420000004300000044000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 7230f59856278baaf99fe415284c9a0f
+  longitude: -105.242139
+  latitude: 40.018309
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 3.8698041, y: 1.1678207, z: -2.7938404}
+      lookAt: {x: 2.34588, y: -0.041259874, z: 10.975707}
+      up: {x: -0.009564103, y: 0.99621314, z: 0.08641728}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: BERGSBO hinge door 49.5x2.1x229.4 cm in white
+    100002: BERGSBO hinge door 49.5x2.1x229.4 cm in white 1
+    100004: BERGSBO hinge door 49.5x2.1x229.4 cm in white 2
+    100006: BERGSBO hinge door 49.5x2.1x229.4 cm in white 3
+    100008: Group 11
+    100010: Group 14
+    100012: Group 16
+    100014: Group 4
+    100016: Group 59
+    100018: Group 6
+    100020: Group 61
+    100022: Group 9
+    100024: HEDRA cabinet knobs 3.2x2.7 cm, set of 2
+    100026: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 1
+    100028: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 2
+    100030: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 3
+    100032: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 4
+    100034: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 5
+    100036: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 6
+    100038: KOMPLEMENT clothes rail 96x5.1x4.8 cm in grey
+    100040: KOMPLEMENT clothes rail 96x5.1x4.8 cm in grey 1
+    100042: KOMPLEMENT drawer 93x57.4x16 cm in white
+    100044: KOMPLEMENT drawer 93x57.4x16 cm in white 1
+    100046: KOMPLEMENT drawer 93x57.4x16 cm in white 2
+    100048: KOMPLEMENT glass front drawer 93x57.4x16 cm in oak
+    100050: KOMPLEMENT shelf 96x57.7x1.8 cm in oak
+    100052: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 1
+    100054: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 2
+    100056: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 3
+    100058: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 4
+    100060: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 5
+    100062: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 6
+    100064: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 7
+    100066: PAX wardrobe frame 100x58x236 cm in oak
+    100068: PAX wardrobe frame 100x58x236 cm in oak 1
+    100070: PAX wardrobe frame 100x58x236 cm in oak 2
+    100072: //RootNode
+    400000: BERGSBO hinge door 49.5x2.1x229.4 cm in white
+    400002: BERGSBO hinge door 49.5x2.1x229.4 cm in white 1
+    400004: BERGSBO hinge door 49.5x2.1x229.4 cm in white 2
+    400006: BERGSBO hinge door 49.5x2.1x229.4 cm in white 3
+    400008: Group 11
+    400010: Group 14
+    400012: Group 16
+    400014: Group 4
+    400016: Group 59
+    400018: Group 6
+    400020: Group 61
+    400022: Group 9
+    400024: HEDRA cabinet knobs 3.2x2.7 cm, set of 2
+    400026: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 1
+    400028: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 2
+    400030: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 3
+    400032: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 4
+    400034: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 5
+    400036: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 6
+    400038: KOMPLEMENT clothes rail 96x5.1x4.8 cm in grey
+    400040: KOMPLEMENT clothes rail 96x5.1x4.8 cm in grey 1
+    400042: KOMPLEMENT drawer 93x57.4x16 cm in white
+    400044: KOMPLEMENT drawer 93x57.4x16 cm in white 1
+    400046: KOMPLEMENT drawer 93x57.4x16 cm in white 2
+    400048: KOMPLEMENT glass front drawer 93x57.4x16 cm in oak
+    400050: KOMPLEMENT shelf 96x57.7x1.8 cm in oak
+    400052: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 1
+    400054: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 2
+    400056: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 3
+    400058: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 4
+    400060: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 5
+    400062: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 6
+    400064: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 7
+    400066: PAX wardrobe frame 100x58x236 cm in oak
+    400068: PAX wardrobe frame 100x58x236 cm in oak 1
+    400070: PAX wardrobe frame 100x58x236 cm in oak 2
+    400072: //RootNode
+    2100000: wood osb
+    2100002: oak PAX
+    2100004: '[0132_LightGray]'
+    2100006: glass 1 KOMPLEMENT
+    2100008: glass 2 KOMPLEMENT
+    2100010: '[0128_White]'
+    2100012: medium brown PAX
+    2100014: '[0134_DimGray]'
+    2100016: anthracite HEDRA
+    2300000: BERGSBO hinge door 49.5x2.1x229.4 cm in white
+    2300002: BERGSBO hinge door 49.5x2.1x229.4 cm in white 1
+    2300004: BERGSBO hinge door 49.5x2.1x229.4 cm in white 2
+    2300006: BERGSBO hinge door 49.5x2.1x229.4 cm in white 3
+    2300008: Group 11
+    2300010: Group 14
+    2300012: Group 16
+    2300014: Group 4
+    2300016: Group 59
+    2300018: Group 6
+    2300020: Group 61
+    2300022: Group 9
+    2300024: HEDRA cabinet knobs 3.2x2.7 cm, set of 2
+    2300026: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 1
+    2300028: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 2
+    2300030: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 3
+    2300032: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 4
+    2300034: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 5
+    2300036: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 6
+    2300038: KOMPLEMENT clothes rail 96x5.1x4.8 cm in grey
+    2300040: KOMPLEMENT clothes rail 96x5.1x4.8 cm in grey 1
+    2300042: KOMPLEMENT shelf 96x57.7x1.8 cm in oak
+    2300044: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 1
+    2300046: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 2
+    2300048: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 3
+    2300050: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 4
+    2300052: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 5
+    2300054: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 6
+    2300056: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 7
+    2300058: PAX wardrobe frame 100x58x236 cm in oak
+    2300060: PAX wardrobe frame 100x58x236 cm in oak 1
+    2300062: PAX wardrobe frame 100x58x236 cm in oak 2
+    3300000: BERGSBO hinge door 49.5x2.1x229.4 cm in white
+    3300002: BERGSBO hinge door 49.5x2.1x229.4 cm in white 1
+    3300004: BERGSBO hinge door 49.5x2.1x229.4 cm in white 2
+    3300006: BERGSBO hinge door 49.5x2.1x229.4 cm in white 3
+    3300008: Group 11
+    3300010: Group 14
+    3300012: Group 16
+    3300014: Group 4
+    3300016: Group 59
+    3300018: Group 6
+    3300020: Group 61
+    3300022: Group 9
+    3300024: HEDRA cabinet knobs 3.2x2.7 cm, set of 2
+    3300026: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 1
+    3300028: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 2
+    3300030: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 3
+    3300032: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 4
+    3300034: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 5
+    3300036: HEDRA cabinet knobs 3.2x2.7 cm, set of 2 6
+    3300038: KOMPLEMENT clothes rail 96x5.1x4.8 cm in grey
+    3300040: KOMPLEMENT clothes rail 96x5.1x4.8 cm in grey 1
+    3300042: KOMPLEMENT shelf 96x57.7x1.8 cm in oak
+    3300044: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 1
+    3300046: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 2
+    3300048: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 3
+    3300050: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 4
+    3300052: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 5
+    3300054: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 6
+    3300056: KOMPLEMENT shelf 96x57.7x1.8 cm in oak 7
+    3300058: PAX wardrobe frame 100x58x236 cm in oak
+    3300060: PAX wardrobe frame 100x58x236 cm in oak 1
+    3300062: PAX wardrobe frame 100x58x236 cm in oak 2
+    4300000: Mesh PAX wardrobe frame 100x58x236 cm in oak
+    4300002: Mesh Group 4
+    4300004: Mesh Group 6
+    4300006: Mesh Group 9
+    4300008: Mesh Group 11
+    4300010: Mesh KOMPLEMENT shelf 96x57.7x1.8 cm in oak
+    4300012: Mesh KOMPLEMENT clothes rail 96x5.1x4.8 cm in grey
+    4300014: Mesh BERGSBO hinge door 49.5x2.1x229.4 cm in white
+    4300016: Mesh HEDRA cabinet knobs 3.2x2.7 cm, set of 2
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: oak PAX
+    second: {fileID: 2100000, guid: deef3722d38f22345ab3292035314636, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

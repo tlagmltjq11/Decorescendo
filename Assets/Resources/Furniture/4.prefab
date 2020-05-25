@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4592560477903944120}
   - component: {fileID: 4592560477903944126}
   - component: {fileID: 4592560477903944121}
-  m_Layer: 0
-  m_Name: MALMBedBlack
+  m_Layer: 11
+  m_Name: 4
   m_TagString: furniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 4592560478310884966}
   - component: {fileID: 4592560478310884964}
   - component: {fileID: 4592560478310884967}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: MALMBedBlack 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,6 +116,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -128,6 +129,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

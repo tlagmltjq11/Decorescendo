@@ -25,7 +25,9 @@ public class PolyWallManager : SingletonMonoBehaviour<PolyWallManager>
     {
         var texture = EventSystem.current.currentSelectedGameObject.GetComponent<RawImage>().texture;
         var material = Resources.Load("Materials/" + texture.name) as Material;
+
         var poly = GetChosenPoly();
+        Debug.Log(poly);
         poly.SetMaterial(material);
         poly.m_isChosen = false;
         m_select = true;
@@ -36,6 +38,8 @@ public class PolyWallManager : SingletonMonoBehaviour<PolyWallManager>
         var texture = EventSystem.current.currentSelectedGameObject.GetComponent<RawImage>().texture;
         var material = Resources.Load("Materials/" + texture.name) as Material;
         var wall = GetChosenWall();
+        Debug.Log(m_wallList.Count);
+        Debug.Log(wall);
         wall.SetMaterial(material);
         wall.m_isChosen = false;
         m_select = true;

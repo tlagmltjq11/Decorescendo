@@ -29,6 +29,8 @@ public class PolyController : MonoBehaviour
     public void CreateFloor()
     {
         gameObject.transform.parent = GameObject.Find("Polys").transform;
+        gameObject.layer = 9;
+        gameObject.tag = "Floor";
 
         var vertices2D = m_vectList.ToArray<Vector2>();
         var vertices3D = System.Array.ConvertAll<Vector2, Vector3>(vertices2D, v => new Vector3(v.x, 0.01f, v.y));
@@ -55,8 +57,8 @@ public class PolyController : MonoBehaviour
         mesh.RecalculateBounds();
 
         // Set up game object with mesh;
-        var meshRenderer = this.gameObject.AddComponent<MeshRenderer>();
-        meshRenderer.material = new Material(Shader.Find("DoubleSided"));
+        m_meshRen = this.gameObject.AddComponent<MeshRenderer>();
+        //m_meshRen.material = new Material(Shader.Find("DoubleSided"));
 
         var filter = this.gameObject.AddComponent<MeshFilter>();
         filter.mesh = mesh;
@@ -88,16 +90,20 @@ public class PolyController : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        m_meshRen = GetComponent<MeshRenderer>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         m_bc = GetComponent<BoxCollider>();
-        m_meshRen = GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        IsWallExist();
+        //IsWallExist();
     }
 }

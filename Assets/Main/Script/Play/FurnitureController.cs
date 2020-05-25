@@ -1,0 +1,78 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FurnitureController : MonoBehaviour
+{
+
+    Canvas[] m_canvas;
+    public bool m_isChosen;
+
+    GameObject removefurbutton;
+
+    Ray m_ray; //광선을 나타내는 변수
+    RaycastHit m_rayHit; //충돌을 나타내는 변수
+
+    public void OnUI(int LR)
+    {
+        if (LR == 0) //좌클릭시;
+        {
+            for (int i = 0; i < m_canvas.Length; i++)
+            {
+                string name = m_canvas[i].gameObject.name;
+                name = name.Substring(0, name.Length - 7);
+                Debug.Log(name);
+                if (name.Equals("FurnitureMoveUI"))
+                {
+                    m_canvas[i].gameObject.SetActive(true);
+                }
+            }
+        }
+        else if (LR == 1)    //우클릭시
+        {
+            for (int i = 0; i < m_canvas.Length; i++)
+            {
+                string name = m_canvas[i].gameObject.name;
+                name = name.Substring(0, name.Length - 7);
+                Debug.Log(name);
+                if (name.Equals("FurnitureRotationUI"))
+                {
+                    m_canvas[i].gameObject.SetActive(true);
+                }
+            }
+        }
+    }
+
+    public void OffUI()
+    {
+        m_canvas[0].GetComponentInChildren<Transform>().GetComponent<FurnitureMoveUIController>().Init();
+        m_canvas[1].GetComponentInChildren<Transform>().GetComponent<FurnitureRotationUIController>().Init();
+
+        for (int i = 0; i < m_canvas.Length; i++)
+        {
+            m_canvas[i].gameObject.SetActive(false);
+        }
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        m_isChosen = false;
+        m_canvas = gameObject.GetComponentsInChildren<Canvas>();
+        for (int i = 0; i < m_canvas.Length; i++)
+        {
+            var collider = gameObject.GetComponent<BoxCollider>();
+            float posy = collider.size.y;
+
+            m_canvas[i].gameObject.SetActive(false);
+            m_canvas[i].transform.localPosition = new Vector3((float)-0.2, posy, (float)-0.2);
+            m_canvas[i].transform.localRotation = gameObject.transform.rotation;
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+}

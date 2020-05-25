@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -19,6 +20,8 @@ public class ButtonEvent : SingletonMonoBehaviour<ButtonEvent>
     GameObject m_plane;
 
     DrawHome m_drawHomeScript;
+
+    private GameObject removefurbutton;
 
     private void Start()
     {
@@ -78,5 +81,51 @@ public class ButtonEvent : SingletonMonoBehaviour<ButtonEvent>
         {
             obj.interactable = true;
         }
+    }
+
+    public GameObject CreateRemoveFurButton(UnityAction eventlistener)
+    {
+        if (FindObjectOfType<EventSystem>() == null)
+        {
+            var es = new GameObject("EventSystem", typeof(EventSystem));
+            es.AddComponent<StandaloneInputModule>();
+        }
+
+        removefurbutton = new GameObject("RemoveFurButton");
+
+        var canvasObject = new GameObject("RemoveFurButtonCanvas");
+        var canvas = canvasObject.AddComponent<Canvas>();
+        canvasObject.AddComponent<GraphicRaycaster>();
+        canvasObject.layer = 5;
+        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+
+        var image = removefurbutton.AddComponent<Image>();
+        image.transform.SetParent(canvas.transform);
+        image.rectTransform.sizeDelta = new Vector2(180, 50);
+        image.rectTransform.anchoredPosition = new Vector3(205, 200, 0);
+        image.color = new Color(1f, .3f, .3f, .5f);
+
+
+        var button = removefurbutton.AddComponent<Button>();
+        button.targetGraphic = image;
+        button.onClick.AddListener(eventlistener);
+
+        var textObject = new GameObject("Text");
+        textObject.transform.parent = removefurbutton.transform;
+        var text = textObject.AddComponent<Text>();
+        text.rectTransform.sizeDelta = Vector2.zero;
+        text.rectTransform.anchorMin = Vector2.zero;
+        text.rectTransform.anchorMax = Vector2.one;
+        text.rectTransform.anchoredPosition = new Vector2(.5f, .5f);
+        text.text = "Remove Furniture!";
+        text.font = Resources.FindObjectsOfTypeAll<Font>()[0];
+        text.fontSize = 20;
+        text.color = Color.white;
+        text.alignment = TextAnchor.MiddleCenter;
+
+        removefurbutton.layer = 5;
+
+        return removefurbutton;
+
     }
 }

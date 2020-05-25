@@ -1,0 +1,170 @@
+fileFormatVersion: 2
+guid: f5f748d225100a54fbb82c268f1d445c
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 3a59d95e1e4ab232836a2a7808fa382b
+  longitude: -105.283
+  latitude: 40.017
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 2.842719, y: 1.4588795, z: 3.5650136}
+      lookAt: {x: 0.5476739, y: 0.15129001, z: 0.5537558}
+      up: {x: -0.19787888, y: 0.9452174, z: -0.2596308}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Group 1
+    100002: Group 11
+    100004: Group 13
+    100006: Group 3
+    100008: Group 5
+    100010: Group 7
+    100012: Group 9
+    100014: //RootNode
+    400000: Group 1
+    400002: Group 11
+    400004: Group 13
+    400006: Group 3
+    400008: Group 5
+    400010: Group 7
+    400012: Group 9
+    400014: //RootNode
+    2100000: _defaultMat
+    2100002: malm_sheet
+    2100004: sosna
+    2100006: '[Color M00]'
+    2300000: Group 1
+    2300002: Group 11
+    2300004: Group 13
+    2300006: Group 3
+    2300008: Group 5
+    2300010: Group 7
+    2300012: Group 9
+    3300000: Group 1
+    3300002: Group 11
+    3300004: Group 13
+    3300006: Group 3
+    3300008: Group 5
+    3300010: Group 7
+    3300012: Group 9
+    4300000: Mesh Group 1
+    4300002: Mesh Group 5
+    4300004: Mesh Group 7
+    4300006: Mesh Group 11
+    4300008: Mesh Group 13
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color M00]'
+    second: {fileID: 2100000, guid: a7ff1e6be3f91484aa87dfaf4b7aa661, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: a7ff1e6be3f91484aa87dfaf4b7aa661, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: malm_sheet
+    second: {fileID: 2100000, guid: a7ff1e6be3f91484aa87dfaf4b7aa661, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sosna
+    second: {fileID: 2100000, guid: c9ae9eeaa39ac8e498440ec56f901c72, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
