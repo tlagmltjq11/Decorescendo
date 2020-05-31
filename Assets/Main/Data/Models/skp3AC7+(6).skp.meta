@@ -1,0 +1,458 @@
+fileFormatVersion: 2
+guid: 04d7c83e1c035da49bfc2043ab6ec395
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000
+  assetHash:
+    serializedVersion: 2
+    Hash: f8015bca8c07354280f5b12d2526bc53
+  longitude: 24.58163192547508
+  latitude: 35.38161711299642
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 26.92635, y: 55.62904, z: -35.52449}
+      lookAt: {x: 3.4696517, y: 8.526139, z: -1.5029252}
+      up: {x: -0.4266929, y: 0.6594901, z: 0.6188748}
+      fov: 45
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: ChamferBo0
+    100002: ChamferBo1
+    100004: ChamferBox
+    100006: Cylinder11
+    100008: Cylinder115
+    100010: Cylinder116
+    100012: Cylinder117
+    100014: Cylinder12
+    100016: Cylinder1210
+    100018: Cylinder1210 1
+    100020: Cylinder1211
+    100022: Cylinder1211 1
+    100024: Cylinder129
+    100026: Group 1
+    100028: Group 11
+    100030: Group 16
+    100032: Group 21
+    100034: Group 26
+    100036: Group 31
+    100038: Group 36
+    100040: Group 41
+    100042: Group 46
+    100044: Group 51
+    100046: Group 56
+    100048: Group 6
+    100050: Group 61
+    100052: Group 66
+    100054: Helix0613
+    100056: Helix0613 1
+    100058: Helix0613#1
+    100060: Helix0613#1 1
+    100062: Line51
+    100064: Line52
+    100066: Line53
+    100068: Line53 1
+    100070: Line53 10
+    100072: Line53 11
+    100074: Line53 12
+    100076: Line53 13
+    100078: Line53 2
+    100080: Line53 3
+    100082: Line53 4
+    100084: Line53 5
+    100086: Line53 6
+    100088: Line53 7
+    100090: Line53 8
+    100092: Line53 9
+    100094: Line82
+    100096: Line8233
+    100098: Line8233 1
+    100100: Line84
+    100102: Line8435
+    100104: Line8435 1
+    100106: pillow01
+    100108: pillow04
+    100110: //RootNode
+    100112: Torus09
+    100114: Torus09 1
+    100116: Torus09 10
+    100118: Torus09 11
+    100120: Torus09 12
+    100122: Torus09 13
+    100124: Torus09 2
+    100126: Torus09 3
+    100128: Torus09 4
+    100130: Torus09 5
+    100132: Torus09 6
+    100134: Torus09 7
+    100136: Torus09 8
+    100138: Torus09 9
+    100140: Torus0944
+    100142: Torus0945
+    100144: Torus0946
+    100146: Torus0947
+    100148: Torus0948
+    100150: Torus0949
+    100152: Torus0950
+    100154: Torus0951
+    100156: Torus0952
+    100158: Torus0953
+    100160: Torus0954
+    100162: Torus0955
+    100164: Torus0956
+    100166: Torus0956 1
+    400000: ChamferBo0
+    400002: ChamferBo1
+    400004: ChamferBox
+    400006: Cylinder11
+    400008: Cylinder115
+    400010: Cylinder116
+    400012: Cylinder117
+    400014: Cylinder12
+    400016: Cylinder1210
+    400018: Cylinder1210 1
+    400020: Cylinder1211
+    400022: Cylinder1211 1
+    400024: Cylinder129
+    400026: Group 1
+    400028: Group 11
+    400030: Group 16
+    400032: Group 21
+    400034: Group 26
+    400036: Group 31
+    400038: Group 36
+    400040: Group 41
+    400042: Group 46
+    400044: Group 51
+    400046: Group 56
+    400048: Group 6
+    400050: Group 61
+    400052: Group 66
+    400054: Helix0613
+    400056: Helix0613 1
+    400058: Helix0613#1
+    400060: Helix0613#1 1
+    400062: Line51
+    400064: Line52
+    400066: Line53
+    400068: Line53 1
+    400070: Line53 10
+    400072: Line53 11
+    400074: Line53 12
+    400076: Line53 13
+    400078: Line53 2
+    400080: Line53 3
+    400082: Line53 4
+    400084: Line53 5
+    400086: Line53 6
+    400088: Line53 7
+    400090: Line53 8
+    400092: Line53 9
+    400094: Line82
+    400096: Line8233
+    400098: Line8233 1
+    400100: Line84
+    400102: Line8435
+    400104: Line8435 1
+    400106: pillow01
+    400108: pillow04
+    400110: //RootNode
+    400112: Torus09
+    400114: Torus09 1
+    400116: Torus09 10
+    400118: Torus09 11
+    400120: Torus09 12
+    400122: Torus09 13
+    400124: Torus09 2
+    400126: Torus09 3
+    400128: Torus09 4
+    400130: Torus09 5
+    400132: Torus09 6
+    400134: Torus09 7
+    400136: Torus09 8
+    400138: Torus09 9
+    400140: Torus0944
+    400142: Torus0945
+    400144: Torus0946
+    400146: Torus0947
+    400148: Torus0948
+    400150: Torus0949
+    400152: Torus0950
+    400154: Torus0951
+    400156: Torus0952
+    400158: Torus0953
+    400160: Torus0954
+    400162: Torus0955
+    400164: Torus0956
+    400166: Torus0956 1
+    2100000: 3
+    2100002: 2
+    2100004: 1
+    2100006: 4
+    2100008: 5
+    2300000: ChamferBo0
+    2300002: ChamferBo1
+    2300004: ChamferBox
+    2300006: Cylinder11
+    2300008: Cylinder115
+    2300010: Cylinder116
+    2300012: Cylinder117
+    2300014: Cylinder12
+    2300016: Cylinder1210
+    2300018: Cylinder1210 1
+    2300020: Cylinder1211
+    2300022: Cylinder1211 1
+    2300024: Cylinder129
+    2300026: Helix0613
+    2300028: Helix0613 1
+    2300030: Helix0613#1
+    2300032: Helix0613#1 1
+    2300034: Line51
+    2300036: Line52
+    2300038: Line53
+    2300040: Line53 1
+    2300042: Line53 10
+    2300044: Line53 11
+    2300046: Line53 12
+    2300048: Line53 13
+    2300050: Line53 2
+    2300052: Line53 3
+    2300054: Line53 4
+    2300056: Line53 5
+    2300058: Line53 6
+    2300060: Line53 7
+    2300062: Line53 8
+    2300064: Line53 9
+    2300066: Line82
+    2300068: Line8233
+    2300070: Line8233 1
+    2300072: Line84
+    2300074: Line8435
+    2300076: Line8435 1
+    2300078: pillow01
+    2300080: pillow04
+    2300082: Torus09
+    2300084: Torus09 1
+    2300086: Torus09 10
+    2300088: Torus09 11
+    2300090: Torus09 12
+    2300092: Torus09 13
+    2300094: Torus09 2
+    2300096: Torus09 3
+    2300098: Torus09 4
+    2300100: Torus09 5
+    2300102: Torus09 6
+    2300104: Torus09 7
+    2300106: Torus09 8
+    2300108: Torus09 9
+    2300110: Torus0944
+    2300112: Torus0945
+    2300114: Torus0946
+    2300116: Torus0947
+    2300118: Torus0948
+    2300120: Torus0949
+    2300122: Torus0950
+    2300124: Torus0951
+    2300126: Torus0952
+    2300128: Torus0953
+    2300130: Torus0954
+    2300132: Torus0955
+    2300134: Torus0956
+    2300136: Torus0956 1
+    3300000: ChamferBo0
+    3300002: ChamferBo1
+    3300004: ChamferBox
+    3300006: Cylinder11
+    3300008: Cylinder115
+    3300010: Cylinder116
+    3300012: Cylinder117
+    3300014: Cylinder12
+    3300016: Cylinder1210
+    3300018: Cylinder1210 1
+    3300020: Cylinder1211
+    3300022: Cylinder1211 1
+    3300024: Cylinder129
+    3300026: Helix0613
+    3300028: Helix0613 1
+    3300030: Helix0613#1
+    3300032: Helix0613#1 1
+    3300034: Line51
+    3300036: Line52
+    3300038: Line53
+    3300040: Line53 1
+    3300042: Line53 10
+    3300044: Line53 11
+    3300046: Line53 12
+    3300048: Line53 13
+    3300050: Line53 2
+    3300052: Line53 3
+    3300054: Line53 4
+    3300056: Line53 5
+    3300058: Line53 6
+    3300060: Line53 7
+    3300062: Line53 8
+    3300064: Line53 9
+    3300066: Line82
+    3300068: Line8233
+    3300070: Line8233 1
+    3300072: Line84
+    3300074: Line8435
+    3300076: Line8435 1
+    3300078: pillow01
+    3300080: pillow04
+    3300082: Torus09
+    3300084: Torus09 1
+    3300086: Torus09 10
+    3300088: Torus09 11
+    3300090: Torus09 12
+    3300092: Torus09 13
+    3300094: Torus09 2
+    3300096: Torus09 3
+    3300098: Torus09 4
+    3300100: Torus09 5
+    3300102: Torus09 6
+    3300104: Torus09 7
+    3300106: Torus09 8
+    3300108: Torus09 9
+    3300110: Torus0944
+    3300112: Torus0945
+    3300114: Torus0946
+    3300116: Torus0947
+    3300118: Torus0948
+    3300120: Torus0949
+    3300122: Torus0950
+    3300124: Torus0951
+    3300126: Torus0952
+    3300128: Torus0953
+    3300130: Torus0954
+    3300132: Torus0955
+    3300134: Torus0956
+    3300136: Torus0956 1
+    4300000: Mesh Torus09
+    4300002: Mesh Line53
+    4300004: Mesh ChamferBo0
+    4300006: Mesh ChamferBo1
+    4300008: Mesh ChamferBox
+    4300010: Mesh Cylinder11
+    4300012: Mesh Cylinder115
+    4300014: Mesh Cylinder116
+    4300016: Mesh Cylinder117
+    4300018: Mesh Cylinder12
+    4300020: Mesh Cylinder129
+    4300022: Mesh Cylinder1210
+    4300024: Mesh Cylinder1211
+    4300026: Mesh Helix0613
+    4300028: Mesh Line51
+    4300030: Mesh Line52
+    4300032: Mesh Line82
+    4300034: Mesh Line8233
+    4300036: Mesh Line84
+    4300038: Mesh Line8435
+    4300040: Mesh Torus0944
+    4300042: Mesh Torus0945
+    4300044: Mesh Torus0946
+    4300046: Mesh Torus0947
+    4300048: Mesh Torus0948
+    4300050: Mesh Torus0949
+    4300052: Mesh Torus0950
+    4300054: Mesh Torus0951
+    4300056: Mesh Torus0952
+    4300058: Mesh Torus0953
+    4300060: Mesh Torus0954
+    4300062: Mesh Torus0955
+    4300064: Mesh Torus0956
+    4300066: Mesh pillow01
+    4300068: Mesh pillow04
+    4300070: Mesh Helix0613#1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

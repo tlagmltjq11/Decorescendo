@@ -7,25 +7,56 @@ using UnityEngine.EventSystems;
 
 public class FurnitureRotationUIController : MonoBehaviour
 {
+    [SerializeField]
+    GameObject m_rotate;
+
     CameraController m_camera;
     bool m_isDrag = false;
+
     public void PD()
     {
         m_isDrag = true;
         m_camera.enabled = false;
-        Debug.Log(m_isDrag);
     }
 
     public void PU()
     {
         m_isDrag = false;
         m_camera.enabled = true;
-        Debug.Log(m_isDrag);
+    }
+
+    private void Awake()
+    {
+        m_camera = Camera.main.GetComponent<CameraController>();
+        var obj = GameObject.Find("Canvas");
+        var childObjects = obj.GetComponentsInChildren<Transform>(true);
+        for (int i = 0; i < childObjects.Length; i++)
+        {
+            if (childObjects[i].name.Equals("InputField_Rotate"))
+            {
+                m_rotate = childObjects[i].gameObject;
+                break;
+            }
+        }
+
+
+    }
+
+    private void OnEnable()
+    {
+        m_rotate.SetActive(true);
+    }
+
+    private void OnDisable()
+    {
+        if(m_rotate != null)
+        {
+            m_rotate.SetActive(false);
+        }
     }
 
     void Start()
     {
-        m_camera = Camera.main.GetComponent<CameraController>();
         m_isDrag = false;
     }
 
@@ -40,13 +71,16 @@ public class FurnitureRotationUIController : MonoBehaviour
     {
         if (m_isDrag)
         {
+            BoxCollider box = gameObject.transform.parent.GetComponent<BoxCollider>();
+            Vector3 pivot = gameObject.transform.parent.transform.TransformPoint(box.center);
+
             if (Input.GetAxis("Mouse X") > 0)
             {
-                gameObject.transform.parent.Rotate(Vector3.up * 3);
+                gameObject.transform.parent.RotateAround(pivot, Vector3.up, 2);
             }
             else if (Input.GetAxis("Mouse X") < 0)
             {
-                gameObject.transform.parent.Rotate(-Vector3.up * 3);
+                gameObject.transform.parent.RotateAround(pivot, Vector3.up, -2);
             }
         }
 

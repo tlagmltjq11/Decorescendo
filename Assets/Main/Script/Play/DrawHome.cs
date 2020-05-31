@@ -39,29 +39,34 @@ public class DrawHome : MonoBehaviour
     {
         string name = "Wall" + m_wallCnt.ToString();
         var obj = GameObject.Find(name);
-        var wallControllers = obj.GetComponentsInChildren<WallController>();
 
-        for(int i=0; i< wallControllers.Length; i++)
+        if (obj != null)
         {
-            PolyWallManager.Instance.RemoveWall(wallControllers[i]);
-        }
 
-        Destroy(obj);
-        
-        if(m_wallCnt -1 >= 0)
-        {
-            m_wallCnt--;
-        }
-        
-        if(m_vectList.Count > 0)
-        {
-            if(m_vectList.Count == 2)
+            var wallControllers = obj.GetComponentsInChildren<WallController>();
+
+            for (int i = 0; i < wallControllers.Length; i++)
             {
-                m_vectList.Clear();
+                PolyWallManager.Instance.RemoveWall(wallControllers[i]);
             }
-            else
+
+            Destroy(obj);
+
+            if (m_wallCnt - 1 >= 0)
             {
-                m_vectList.RemoveAt(m_vectList.Count - 1);
+                m_wallCnt--;
+            }
+
+            if (m_vectList.Count > 0)
+            {
+                if (m_vectList.Count == 2)
+                {
+                    m_vectList.Clear();
+                }
+                else
+                {
+                    m_vectList.RemoveAt(m_vectList.Count - 1);
+                }
             }
         }
     }
@@ -71,32 +76,39 @@ public class DrawHome : MonoBehaviour
         Transform[] childs;
         childs = GameObject.Find("Walls").GetComponentsInChildren<Transform>(true);
 
-        foreach(var iter in childs)
+        if (childs.Length != 0)
         {
-            if(iter != GameObject.Find("Walls").transform)
+
+            foreach (var iter in childs)
             {
-                Destroy(iter.gameObject);
+                if (iter != GameObject.Find("Walls").transform)
+                {
+                    Destroy(iter.gameObject);
+                }
             }
+
+            m_wallCnt = 0;
+            m_polyCnt = 0;
+            m_vectList.Clear();
+
+            PolyWallManager.Instance.RemoveAllWall();
+            PolyWallManager.Instance.RemoveAllPoly();
         }
-
-        m_wallCnt = 0;
-        m_polyCnt = 0;
-        m_vectList.Clear();
-
-        PolyWallManager.Instance.RemoveAllWall();
-        PolyWallManager.Instance.RemoveAllPoly();
     }
 
     public void EraseAllFurnitures()
     {
         var furnitures = GameObject.FindGameObjectsWithTag("furniture");
 
-        foreach (var iter in furnitures)
+        if (furnitures.Length != 0)
         {
-            Destroy(iter.gameObject);   
-        }
+            foreach (var iter in furnitures)
+            {
+                Destroy(iter.gameObject);
+            }
 
-        FurnitureManager.Instance.RemoveAll();
+            FurnitureManager.Instance.RemoveAll();
+        }
     }
 
     public void CreateFloor()
@@ -209,13 +221,13 @@ public class DrawHome : MonoBehaviour
                 m_isHorizon = false;
                 m_isVertical = false;
 
-                if (CalculateAngle(prevPos, m_pos) == 9999f || (CalculateAngle(prevPos, m_pos) < 5f && CalculateAngle(prevPos, m_pos) > 0.111f) || (CalculateAngle(prevPos, m_pos) > 355f && CalculateAngle(prevPos, m_pos) < 359.999f))
+                if (CalculateAngle(prevPos, m_pos) == 9999f || (CalculateAngle(prevPos, m_pos) < 3.5f && CalculateAngle(prevPos, m_pos) > 0.111f) || (CalculateAngle(prevPos, m_pos) > 356.5f && CalculateAngle(prevPos, m_pos) < 359.999f))
                 {
                     m_pos = new Vector3(m_pos.x, m_pos.y, prevPos.z);
                     wall.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
                     m_isHorizon = true;
                 }
-                else if (CalculateAngle(prevPos, m_pos) == 0f || (CalculateAngle(prevPos, m_pos) > 85f && CalculateAngle(prevPos, m_pos) < 89.999f) || (CalculateAngle(prevPos, m_pos) < 275f && CalculateAngle(prevPos, m_pos) > 270.111f))
+                else if (CalculateAngle(prevPos, m_pos) == 0f || (CalculateAngle(prevPos, m_pos) > 86.5f && CalculateAngle(prevPos, m_pos) < 89.999f) || (CalculateAngle(prevPos, m_pos) < 273.5f && CalculateAngle(prevPos, m_pos) > 270.111f))
                 {
                     m_pos = new Vector3(prevPos.x, m_pos.y, m_pos.z);
                     wall.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
@@ -229,7 +241,7 @@ public class DrawHome : MonoBehaviour
                 wall.transform.localScale = new Vector3(Vector3.Distance(prevPos, m_pos), 3, 0.3f);
                 wall.transform.position = new Vector3((prevPos.x + m_pos.x) / 2f, 1.5f, (prevPos.z + m_pos.z) / 2f);
 
-                m_lengthText.text = (Vector3.Distance(prevPos, m_pos)).ToString("N2");
+                m_lengthText.text = (Vector3.Distance(prevPos, m_pos)).ToString("N2") + "m";
             }
             yield return null;
         }
@@ -250,8 +262,8 @@ public class DrawHome : MonoBehaviour
                 {
                     Vector3 prevPos = GameObject.Find("Wall" + m_wallCnt).transform.position;
                     float dir = m_pos.x - prevPos.x;
-
-                    if(dir > 0)
+                    
+                    if (dir > 0)
                     {   
                         //0.05f 를 더해주는것은 그냥 좌표 보정용
                         m_pos = new Vector3(prevPos.x + dir - 0.05f, 0f, prevPos.z);
@@ -265,7 +277,8 @@ public class DrawHome : MonoBehaviour
                 {
                     Vector3 prevPos = GameObject.Find("Wall" + m_wallCnt).transform.position;
                     float dir = m_pos.z - prevPos.z;
-                    
+
+
                     if (dir > 0)
                     {
                         //0.05f 를 더해주는것은 그냥 좌표 보정용

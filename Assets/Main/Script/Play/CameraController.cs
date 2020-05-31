@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CameraController : MonoBehaviour
 {
@@ -17,14 +18,14 @@ public class CameraController : MonoBehaviour
         if (Input.GetAxis("Mouse ScrollWheel") < 0)
         {
 
-            transform.Translate(0, 0, -0.5f);
+            transform.Translate(0, 0, -0.8f);
         }
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
             if (transform.position.y > 1)
             {
-                transform.Translate(0, 0, 0.5f);
+                transform.Translate(0, 0, 0.8f);
             }
         }
 
@@ -32,7 +33,8 @@ public class CameraController : MonoBehaviour
         {
             if (Input.GetAxis("Mouse X") < 0)
             {
-                transform.Translate(0.25f, 0, 0);
+                if (!EventSystem.current.IsPointerOverGameObject())
+                    transform.Translate(0.7f, 0, 0);
             }
         }
 
@@ -40,7 +42,8 @@ public class CameraController : MonoBehaviour
         {
             if (Input.GetAxis("Mouse X") > 0)
             {
-                transform.Translate(-0.25f, 0, 0);
+                if (!EventSystem.current.IsPointerOverGameObject())
+                    transform.Translate(-0.7f, 0, 0);
             }
         }
 
@@ -48,7 +51,8 @@ public class CameraController : MonoBehaviour
         {
             if (Input.GetAxis("Mouse Y") < 0)
             {
-                transform.Translate(0, 0.25f, 0);
+                if (!EventSystem.current.IsPointerOverGameObject())
+                    transform.Translate(0, 0.7f, 0);
             }
         }
 
@@ -58,7 +62,8 @@ public class CameraController : MonoBehaviour
             {
                 if (transform.position.y > 0.8)
                 {
-                    transform.Translate(0, -0.25f, 0);
+                    if (!EventSystem.current.IsPointerOverGameObject())
+                        transform.Translate(0, -0.7f, 0);
                 }
             }
         }
@@ -67,7 +72,7 @@ public class CameraController : MonoBehaviour
         {
             if (Input.GetAxis("Mouse X") > 0)
             {
-                transform.Rotate(0, 1f, 0, Space.World);
+                transform.Rotate(0, 2.5f, 0, Space.World);
             }
         }
 
@@ -75,7 +80,7 @@ public class CameraController : MonoBehaviour
         {
             if (Input.GetAxis("Mouse X") < 0)
             {
-                transform.Rotate(0, -1f, 0, Space.World);
+                transform.Rotate(0, -2.5f, 0, Space.World);
             }
         }
 
@@ -83,7 +88,7 @@ public class CameraController : MonoBehaviour
         {
             if (Input.GetAxis("Mouse Y") > 0)
             {
-                transform.Rotate(-1f, 0, 0, Space.Self);
+                transform.Rotate(-2.5f, 0, 0, Space.Self);
             }
         }
 
@@ -91,7 +96,7 @@ public class CameraController : MonoBehaviour
         {
             if (Input.GetAxis("Mouse Y") < 0)
             {
-                transform.Rotate(1f, 0, 0, Space.Self);
+                transform.Rotate(2.5f, 0, 0, Space.Self);
             }
         }
     }
@@ -102,7 +107,7 @@ public class CameraController : MonoBehaviour
         {
             if (m_cameraComponent.orthographicSize < 15f)
             {
-                m_cameraComponent.orthographicSize += 1f;
+                m_cameraComponent.orthographicSize += 2f;
             }
         }
 
@@ -110,7 +115,7 @@ public class CameraController : MonoBehaviour
         {
             if (m_cameraComponent.orthographicSize > 5.71f)
             {
-                m_cameraComponent.orthographicSize -= 1f;
+                m_cameraComponent.orthographicSize -= 2f;
             }
         }
 
@@ -118,8 +123,11 @@ public class CameraController : MonoBehaviour
         {
             if (Input.GetAxis("Mouse X") < 0)
             {
-                transform.Translate(0.25f, 0, 0);
-                m_isDrag = true;
+                if (!EventSystem.current.IsPointerOverGameObject())
+                {
+                    transform.Translate(0.7f, 0, 0);
+                    m_isDrag = true;
+                }
             }
         }
 
@@ -127,8 +135,11 @@ public class CameraController : MonoBehaviour
         {
             if (Input.GetAxis("Mouse X") > 0)
             {
-                transform.Translate(-0.25f, 0, 0);
-                m_isDrag = true;
+                if (!EventSystem.current.IsPointerOverGameObject())
+                {
+                    transform.Translate(-0.7f, 0, 0);
+                    m_isDrag = true;
+                }
             }
         }
 
@@ -136,8 +147,11 @@ public class CameraController : MonoBehaviour
         {
             if (Input.GetAxis("Mouse Y") < 0)
             {
-                transform.Translate(0, 0.25f, 0);
-                m_isDrag = true;
+                if (!EventSystem.current.IsPointerOverGameObject())
+                {
+                    transform.Translate(0, 0.7f, 0);
+                    m_isDrag = true;
+                }
             }
         }
 
@@ -147,8 +161,11 @@ public class CameraController : MonoBehaviour
             {
                 if (transform.position.y > 0.8)
                 {
-                    transform.Translate(0, -0.25f, 0);
-                    m_isDrag = true;
+                    if (!EventSystem.current.IsPointerOverGameObject())
+                    {
+                        transform.Translate(0, -0.7f, 0);
+                        m_isDrag = true;
+                    }
                 }
             }
         }

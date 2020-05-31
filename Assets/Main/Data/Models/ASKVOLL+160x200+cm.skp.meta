@@ -1,0 +1,243 @@
+fileFormatVersion: 2
+guid: 03432fb68fc1d074e9d7a4e5116592a8
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 911f5c69e2c524e66ab334449a17db8e
+  longitude: -105.242139
+  latitude: 40.018309
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 3.0811725, y: 2.6316555, z: -2.5615551}
+      lookAt: {x: -1.7282212, y: -5.2827296, z: 7.812302}
+      up: {x: -0.23937584, y: 0.8222524, z: 0.5163334}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Group 1
+    100004: Group 12
+    100006: Group 3
+    100008: Group 4
+    100010: Group 47
+    100012: Group 48
+    100014: Group 5
+    100016: Group 50
+    100018: Group 51
+    100020: Group 53
+    100022: Group 55
+    100024: Group 57
+    100026: Group 7
+    100028: Group 9
+    100030: IKEA MALM Bed frame with slatted bed base stained oak 107x211 (90x200)#1
+    100032: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#1"
+    100034: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#1 1"
+    100036: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4"
+    100038: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 1"
+    100040: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 10"
+    100042: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 11"
+    100044: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 12"
+    100046: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 13"
+    100048: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 14"
+    100050: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 15"
+    100052: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 2"
+    100054: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 3"
+    100056: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 4"
+    100058: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 5"
+    100060: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 6"
+    100062: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 7"
+    100064: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 8"
+    100066: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 9"
+    400000: //RootNode
+    400002: Group 1
+    400004: Group 12
+    400006: Group 3
+    400008: Group 4
+    400010: Group 47
+    400012: Group 48
+    400014: Group 5
+    400016: Group 50
+    400018: Group 51
+    400020: Group 53
+    400022: Group 55
+    400024: Group 57
+    400026: Group 7
+    400028: Group 9
+    400030: IKEA MALM Bed frame with slatted bed base stained oak 107x211 (90x200)#1
+    400032: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#1"
+    400034: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#1 1"
+    400036: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4"
+    400038: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 1"
+    400040: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 10"
+    400042: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 11"
+    400044: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 12"
+    400046: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 13"
+    400048: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 14"
+    400050: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 15"
+    400052: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 2"
+    400054: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 3"
+    400056: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 4"
+    400058: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 5"
+    400060: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 6"
+    400062: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 7"
+    400064: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 8"
+    400066: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 9"
+    2100000: '[Color M00]'
+    2100002: _5
+    2100004: '[Color_000]'
+    2100006: '[Color F02]'
+    2100008: '[Color F01]'
+    2100010: '[Color_I18]'
+    2300000: Group 48
+    2300002: Group 5
+    2300004: Group 51
+    2300006: Group 53
+    2300008: Group 55
+    2300010: Group 57
+    2300012: Group 7
+    2300014: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#1"
+    2300016: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#1 1"
+    2300018: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4"
+    2300020: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 1"
+    2300022: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 10"
+    2300024: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 11"
+    2300026: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 12"
+    2300028: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 13"
+    2300030: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 14"
+    2300032: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 15"
+    2300034: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 2"
+    2300036: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 3"
+    2300038: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 4"
+    2300040: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 5"
+    2300042: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 6"
+    2300044: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 7"
+    2300046: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 8"
+    2300048: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 9"
+    3300000: Group 48
+    3300002: Group 5
+    3300004: Group 51
+    3300006: Group 53
+    3300008: Group 55
+    3300010: Group 57
+    3300012: Group 7
+    3300014: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#1"
+    3300016: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#1 1"
+    3300018: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4"
+    3300020: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 1"
+    3300022: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 10"
+    3300024: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 11"
+    3300026: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 12"
+    3300028: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 13"
+    3300030: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 14"
+    3300032: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 15"
+    3300034: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 2"
+    3300036: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 3"
+    3300038: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 4"
+    3300040: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 5"
+    3300042: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 6"
+    3300044: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 7"
+    3300046: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 8"
+    3300048: "\u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4 9"
+    4300000: Mesh Group 5
+    4300002: Mesh Group 7
+    4300004: "Mesh \u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#1"
+    4300006: "Mesh \u041A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442#4"
+    4300008: Mesh Group 48
+    4300010: Mesh Group 51
+    4300012: Mesh Group 53
+    4300014: Mesh Group 55
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

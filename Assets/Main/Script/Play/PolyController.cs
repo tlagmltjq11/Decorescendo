@@ -104,6 +104,6 @@ public class PolyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //IsWallExist();
+        IsWallExist();
     }
 }

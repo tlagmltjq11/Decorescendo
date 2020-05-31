@@ -10,8 +10,9 @@ public class FurnitureManager : SingletonMonoBehaviour<FurnitureManager>
 
     [SerializeField]
     GameObject UIEvent;
-    GameObject removefurbutton;
-    GameObject removefur;
+    [SerializeField]
+    UnityEngine.UI.Button removefurbutton;
+
     Ray m_ray;
     RaycastHit m_rayHit;
 
@@ -45,17 +46,35 @@ public class FurnitureManager : SingletonMonoBehaviour<FurnitureManager>
         fur.OnUI(LR);
     }
 
+    public FurnitureController GetChosen()
+    {
+        for (int i = 0; i < m_furniutures.Count; i++)
+        {
+            if (m_furniutures[i].m_isChosen)
+            {
+                return m_furniutures[i];
+            }
+        }
+
+        return null;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        removefurbutton = UIEvent.GetComponent<ButtonEvent>().CreateRemoveFurButton(delegate { RemovefurnitureButtonClicked(removefur.GetComponent<FurnitureController>()); });
-        removefurbutton.SetActive(false);
+        removefurbutton.interactable = false;
     }
 
-    void RemovefurnitureButtonClicked(FurnitureController fur)
+    public void RemovefurnitureButtonClicked()
     {
-        RemoveFurniture(fur);
-        removefurbutton.SetActive(false);
+        FurnitureController fur = GetChosen();
+        if (fur != null)
+        {
+            RemoveFurniture(fur);
+        }
+
+        removefurbutton.interactable = false;
+        Debug.Log(m_furniutures.Count);
     }
 
     // Update is called once per frame
@@ -63,35 +82,44 @@ public class FurnitureManager : SingletonMonoBehaviour<FurnitureManager>
     {
         m_ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Input.GetKey(KeyCode.F))
         {
             if (Physics.Raycast(m_ray, out m_rayHit, 1000f, 1 << LayerMask.NameToLayer("Furniture")))
             {
                 var fur = m_rayHit.transform.gameObject.GetComponent<FurnitureController>();
                 Chosen(fur, 0);
-
-
-                removefur = fur.gameObject;
-                removefurbutton.SetActive(true);
-
-            }
-            else
-            {
-                if (!EventSystem.current.IsPointerOverGameObject())
-                {
-                    removefurbutton.SetActive(false);
-                }
+                removefurbutton.interactable = true;
             }
         }
+
         if (Input.GetMouseButtonDown(1))
         {
             if (Physics.Raycast(m_ray, out m_rayHit, 1000f, 1 << LayerMask.NameToLayer("Furniture")))
             {
                 var fur = m_rayHit.transform.gameObject.GetComponent<FurnitureController>();
                 Chosen(fur, 1);
+                removefurbutton.interactable = true;
+            }
+        }
 
-                removefur = fur.gameObject;
-                removefurbutton.SetActive(true);
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (!Physics.Raycast(m_ray, out m_rayHit, 1000f, 1 << LayerMask.NameToLayer("Furniture") | 1 << LayerMask.NameToLayer("UI")))
+            {
+                if (!EventSystem.current.IsPointerOverGameObject())
+                {
+                    removefurbutton.interactable = false;
+                    FurnitureController fur = GetChosen();
+                    if(fur != null)
+                    {
+                        var ui = fur.gameObject.GetComponentsInChildren<Canvas>();
+                        
+                        for(int i=0; i<ui.Length; i++)
+                        {
+                            ui[i].gameObject.SetActive(false);
+                        }
+                    }
+                }
             }
         }
 

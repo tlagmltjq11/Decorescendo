@@ -47,7 +47,17 @@ SketchUpImporter:
     3300008: //RootNode
     4300000: Mesh Group#47
     4300002: Mesh Component#3
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[0095_LightBlue]'
+    second: {fileID: 2100000, guid: 1d41d1bc8bd9889439a7ed26902ddf44, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[0099_LightSteelBlue]'
+    second: {fileID: 2100000, guid: 1d41d1bc8bd9889439a7ed26902ddf44, type: 2}
   materials:
     importMaterials: 1
     materialName: 2

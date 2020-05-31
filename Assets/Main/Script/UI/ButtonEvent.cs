@@ -79,7 +79,10 @@ public class ButtonEvent : SingletonMonoBehaviour<ButtonEvent>
         buttons = m_canvas.GetComponentsInChildren<Button>(true);
         foreach (Button obj in buttons)
         {
-            obj.interactable = true;
+            if (obj.gameObject.name != "Remove_ Furniture")
+            {
+                obj.interactable = true;
+            }
         }
     }
 

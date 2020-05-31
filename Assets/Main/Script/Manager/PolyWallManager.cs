@@ -21,13 +21,32 @@ public class PolyWallManager : SingletonMonoBehaviour<PolyWallManager>
     [SerializeField]
     GameObject m_WallMat;
 
+    public void EraseAllPoly()
+    {
+        RemoveAllPoly();
+
+        Transform[] childs;
+        childs = GameObject.Find("Polys").GetComponentsInChildren<Transform>(true);
+
+        if (childs.Length != 0)
+        {
+
+            foreach (var iter in childs)
+            {
+                if (iter != GameObject.Find("Polys").transform)
+                {
+                    Destroy(iter.gameObject);
+                }
+            }
+        }
+    }
+
     public void SelectFloorMat()
     {
         var texture = EventSystem.current.currentSelectedGameObject.GetComponent<RawImage>().texture;
         var material = Resources.Load("Materials/" + texture.name) as Material;
 
         var poly = GetChosenPoly();
-        Debug.Log(poly);
         poly.SetMaterial(material);
         poly.m_isChosen = false;
         m_select = true;
@@ -38,8 +57,6 @@ public class PolyWallManager : SingletonMonoBehaviour<PolyWallManager>
         var texture = EventSystem.current.currentSelectedGameObject.GetComponent<RawImage>().texture;
         var material = Resources.Load("Materials/" + texture.name) as Material;
         var wall = GetChosenWall();
-        Debug.Log(m_wallList.Count);
-        Debug.Log(wall);
         wall.SetMaterial(material);
         wall.m_isChosen = false;
         m_select = true;
@@ -81,7 +98,6 @@ public class PolyWallManager : SingletonMonoBehaviour<PolyWallManager>
         if(m_polyList.Remove(poly))
         {
             m_polyList.Remove(poly);
-            Debug.Log(1);
         }
     }
 
@@ -129,7 +145,8 @@ public class PolyWallManager : SingletonMonoBehaviour<PolyWallManager>
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_FloorMat.SetActive(false);
+        m_WallMat.SetActive(false);
     }
 
     // Update is called once per frame

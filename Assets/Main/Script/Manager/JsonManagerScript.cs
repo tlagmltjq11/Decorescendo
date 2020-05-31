@@ -6,6 +6,8 @@ using System.Runtime.InteropServices;
 using System;
 using System.Threading;
 using UnityEngine.SceneManagement;
+using UnityEditor;
+
 public class JsonManagerScript : SingletonMonoBehaviour<JsonManagerScript>
 {
     [SerializeField]
@@ -20,7 +22,7 @@ public class JsonManagerScript : SingletonMonoBehaviour<JsonManagerScript>
 
     [DllImport("__Internal")]
     private static extern void loadweb();
-    
+
     void Start()
     {
         m_moveUI = Resources.Load("FurnitureMoveUI") as GameObject;
@@ -37,7 +39,7 @@ public class JsonManagerScript : SingletonMonoBehaviour<JsonManagerScript>
     {
         Console.WriteLine(json);
         saveww(json);
-    
+
     }
 
     public void FromWebString(string str)
@@ -119,11 +121,21 @@ public class JsonManagerScript : SingletonMonoBehaviour<JsonManagerScript>
     public void addfurniture(string fname)
     {
         fname = "Furniture/" + fname;
-        var fur = Instantiate(Resources.Load(fname), new Vector3(0, 1, 0), new Quaternion(0, 0, 0, 0)) as GameObject;
+        var fur = Instantiate(Resources.Load(fname)) as GameObject;
 
+        var polys = GameObject.Find("Polys");
+        if(polys.transform.childCount >= 1)
+        {
+            var list = polys.GetComponentsInChildren<Transform>();
+            fur.transform.position = new Vector3(list[list.Length - 1].transform.position.x, 0.5f, list[list.Length - 1].transform.position.z);
+        }
+        else
+        {
+            fur.transform.position = new Vector3(0f, 0.5f, 0f);
+        }
 
-        var moveUI = Instantiate(m_moveUI);
-        var rotationUI = Instantiate(m_rotationUI);
+        var moveUI = Instantiate(m_moveUI) as GameObject;
+        var rotationUI = Instantiate(m_rotationUI) as GameObject;
         moveUI.transform.parent = fur.transform;
         rotationUI.transform.parent = fur.transform;
 
@@ -133,14 +145,14 @@ public class JsonManagerScript : SingletonMonoBehaviour<JsonManagerScript>
 
     public void savebuttonOnclick()
     {
-        
+
         var walls = GameObject.FindGameObjectsWithTag("Wall");
-        var furnitures = GameObject.FindGameObjectsWithTag("furniture");
         var floor = GameObject.FindGameObjectsWithTag("Floor");
+        var furnitures = GameObject.FindGameObjectsWithTag("furniture");
 
         wallinfo[] wallinfoarr = new wallinfo[walls.Length];
-        furnitureinfo[] furnitureinfoarr = new furnitureinfo[furnitures.Length];
         floorinfo[] floorinfoarr = new floorinfo[floor.Length];
+        furnitureinfo[] furnitureinfoarr = new furnitureinfo[furnitures.Length];
 
         int index = 0;
         string ToWeb = "";
@@ -159,12 +171,28 @@ public class JsonManagerScript : SingletonMonoBehaviour<JsonManagerScript>
 
 
         index = 0;
+        for (int i = 0; i < floorinfoarr.Length; i++)
+        {
+            var m_mats = floor[i].GetComponent<MeshRenderer>().materials;
+            floorinfoarr[index] = new floorinfo(floor[i].name, floor[i].GetComponent<PolyController>().GetVect(), m_mats[0].name);  //좌표정보 list로 저장
+                                                                                                                                    // Debug.Log("!!!!!!!!!!" + floor[i].GetComponent<PolyController>());
+            string json = JsonUtility.ToJson(floorinfoarr[index]);
+            Debug.Log("floor obj:" + json);
+            ToWeb += json + "!";
+            index++;
+            //    Save(floor[i].name, json);
+        }
+
+        index = 0;
         for (int i = 0; i < furnitureinfoarr.Length; i++)
         {
             string furniturename = furnitures[i].name;
-            if (furnitures[i].name.Substring(furnitures[i].name.Length - 7).Equals("(Clone)"))
+            if (furniturename.Length > 7)
             {
-                furniturename = furnitures[i].name.Substring(0, furnitures[i].name.Length - 7);
+                if (furnitures[i].name.Substring(furnitures[i].name.Length - 7).Equals("(Clone)"))
+                {
+                    furniturename = furnitures[i].name.Substring(0, furnitures[i].name.Length - 7);
+                }
             }
             furnitureinfoarr[index] = new furnitureinfo(furniturename, furnitures[i].transform.position, furnitures[i].transform.rotation);
             string json = JsonUtility.ToJson(furnitureinfoarr[index]);
@@ -174,25 +202,11 @@ public class JsonManagerScript : SingletonMonoBehaviour<JsonManagerScript>
             index++;
 
         }
-
-
-        index = 0;
-        for (int i = 0; i < floorinfoarr.Length; i++)
-        {
-            var m_mats = walls[i].GetComponent<MeshRenderer>().materials;
-            floorinfoarr[index] = new floorinfo(floor[i].name, floor[i].GetComponent<PolyController>().GetVect(), m_mats[0].name);  //좌표정보 list로 저장
-                                                                                                                    // Debug.Log("!!!!!!!!!!" + floor[i].GetComponent<PolyController>());
-            string json = JsonUtility.ToJson(floorinfoarr[index]);
-            Debug.Log("floor obj:" + json);
-            ToWeb += json + "!";
-            //    Save(floor[i].name, json);
-        }
         Save(ToWeb);
     }
 
     public void loadbuttonOnclick()
     {
-        SceneManager.LoadScene("Main");
         loadweb();
     }
     public void loadsummon()
@@ -204,10 +218,13 @@ public class JsonManagerScript : SingletonMonoBehaviour<JsonManagerScript>
         }
         else
         {
+            PolyWallManager.Instance.EraseAllPoly();
+            dh.EraseAll();
+            dh.EraseAllFurnitures();
             FromWebStr = FromWeb.Split('!');
             string[] json2 = FromWebStr;
 
-            for (int i = 0; i < json2.Length; i++)
+            for (int i = 0; i < json2.Length - 1; i++)
             {
                 Debug.Log("json print:" + json2[i].Substring(9, 4));
 
@@ -223,11 +240,27 @@ public class JsonManagerScript : SingletonMonoBehaviour<JsonManagerScript>
                     obj.transform.localScale = obj2.scale;
                     dh.m_wallCnt++;
 
-                    string mateiralname1 = obj2.material_1.Substring(0, obj2.material_1.Length - 11);
-                    var wallmaterial1 = Resources.Load("Materials/" + mateiralname1) as Material;
+                    string materialname1 = obj2.material_1;
+                    if (materialname1.Length > 11)
+                    {
+                        if (materialname1.Substring(materialname1.Length - 10).Equals("(Instance)"))
+                        {
+                            materialname1 = materialname1.Substring(0, materialname1.Length - 11);
+                        }
 
-                    string mateiralname2 = obj2.material_2.Substring(0, obj2.material_2.Length - 11);
-                    var wallmaterial2 = Resources.Load("Materials/" + mateiralname2) as Material;
+                    }
+                    var wallmaterial1 = Resources.Load("Materials/" + materialname1) as Material;
+
+                    string materialname2 = obj2.material_2;
+                    if (materialname2.Length > 11)
+                    {
+                        if (materialname2.Substring(materialname2.Length - 10).Equals("(Instance)"))
+                        {
+                            materialname2 = materialname2.Substring(0, materialname2.Length - 11);
+                        }
+
+                    }
+                    var wallmaterial2 = Resources.Load("Materials/" + materialname2) as Material;
 
 
                     var wallController = obj.GetComponentsInChildren<WallController>();
@@ -246,6 +279,7 @@ public class JsonManagerScript : SingletonMonoBehaviour<JsonManagerScript>
                     string[] coordinate = obj3.position.Split('^');
 
                     GameObject poly = new GameObject(obj3.name);
+
                     PolyController script = poly.AddComponent<PolyController>();
 
                     List<Vector2> list = new List<Vector2>();
@@ -257,14 +291,22 @@ public class JsonManagerScript : SingletonMonoBehaviour<JsonManagerScript>
                         list.Add(new Vector2(float.Parse(xy[0]), float.Parse(xy[1])));
                     }
 
-                    string mateiralname = obj3.material.Substring(0, obj3.material.Length - 11);
-                    Debug.Log("MaterialNameLength : " + mateiralname.Length);
-                    var material = Resources.Load("Materials/" + mateiralname) as Material;
+
+
+                    string materialname = obj3.material;
+                    if (materialname.Length > 11 && materialname.Substring(materialname.Length - 10).Equals("(Instance)"))
+                    {
+                        materialname = materialname.Substring(0, materialname.Length - 11);
+                    }
+                    var material = Resources.Load("Materials/" + materialname) as Material;
 
                     script.SetVect(list);
                     script.CreateFloor();
                     script.SetMaterial(material);
+
                     dh.m_polyCnt++;
+
+                    Debug.Log(script);
 
                     PolyWallManager.Instance.AddPoly(script);
 
@@ -276,13 +318,12 @@ public class JsonManagerScript : SingletonMonoBehaviour<JsonManagerScript>
                     var fur = Instantiate(Resources.Load("Furniture/" + obj2.name), obj2.position, obj2.rotation) as GameObject;
 
 
-                    var moveUI = Instantiate(m_moveUI);
-                    var rotationUI = Instantiate(m_rotationUI);
+                    var moveUI = Instantiate(m_moveUI) as GameObject;
+                    var rotationUI = Instantiate(m_rotationUI) as GameObject;
                     moveUI.transform.parent = fur.transform;
                     rotationUI.transform.parent = fur.transform;
 
                     var script = fur.AddComponent<FurnitureController>();
-                    Debug.Log(script);
                     FurnitureManager.Instance.AddFurniture(script);
                 }
 
