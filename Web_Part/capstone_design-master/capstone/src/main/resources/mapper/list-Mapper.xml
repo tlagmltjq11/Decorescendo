@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.list-Mapper">
+	
+	<select id="getListOne" resultType="lists">
+		SELECT * FROM furnitures
+		<where>
+			<if test="type != 'Type'">
+				type = #{type}
+			</if>
+			<if test="brand != 'Brand'">
+				AND brand = #{brand}
+			</if>
+			<if test="color != 'Color'">
+				AND color = #{color}
+			</if>
+			<if test="price != 'Price'">
+				<choose>
+					<when test= "maxPrice != 'max'">
+						AND price BETWEEN #{price} AND #{maxPrice}
+					</when>
+					<when test="maxPrice == 'max'">
+						AND price >= #{price} 
+					</when>
+				</choose>	
+			</if>
+			
+		</where>
+		ORDER BY modeling, price
+	</select>
+	
+	<insert id="insertFurn">
+		insert into furnitures (num, name, type, brand, color, price, image, detail, modeling)
+		values (#{num},#{name},#{type},#{brand},#{color}, #{price},#{image},#{detail},#{modeling})
+	</insert>
+</mapper>

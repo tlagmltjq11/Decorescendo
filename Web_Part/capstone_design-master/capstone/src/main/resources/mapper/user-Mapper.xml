@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.user-Mapper">
+
+	<select id="getUserOne" resultType="members">
+		SELECT * FROM members
+		<if test="userId != null">
+			where id = #{userId};
+		</if>
+	</select>
+
+	<insert id="userJoin">
+		insert into members
+		(id,pw,email)
+		values
+		(#{id},#{pw},#{email})
+	</insert>
+	
+	<update id = "setFurn">
+		update members set room = #{route} where id = #{ID}
+	</update>
+	
+	<select id = "getFurn" resultType = "members">
+		select room from members
+		<if test = "ID != null">
+			where id = #{ID};
+		</if>
+	</select>
+ 
+</mapper>

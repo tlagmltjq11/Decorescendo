@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.basket-Mapper">
+
+
+	<insert id="insertBasket">
+		insert into baskets
+		values (#{insertID},#{num},#{count})
+	</insert>
+
+	<delete id="deleteBasket">
+		delete from baskets
+		where  id = #{deleteID} AND num = #{num}
+	</delete>
+	
+	<select id="getBasketList" resultType="baskets">
+		SELECT	b.id, b.num, b.count, f.name, f.brand, f.price, f.image, f.detail
+		FROM baskets b
+		JOIN furnitures f
+		ON b.num = f.num
+		WHERE b.id = #{reloadID}
+	</select>
+	
+	<update id = "countBasket" >
+		update baskets set count = #{count} where id = #{countID} AND num = #{num}
+	</update>
+	
+</mapper>
