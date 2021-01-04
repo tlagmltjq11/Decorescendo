@@ -1,2 +1,7 @@
-# Decorescendo
- Capston design 팀 프로젝트 :  가상 가구배치 프로그램
+# Decrescendo
+
+## Award
+<center><img src="https://user-images.githubusercontent.com/43517509/93285427-c3b77700-f80f-11ea-80aa-e18b7d73ed25.jpg" width="300" height="400"></center>
+<br>
+<br>
+<br>
