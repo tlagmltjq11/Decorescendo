@@ -29,7 +29,7 @@ Unity
 
 ### Video.:video_camera:
 *클릭하세요.*<br>
-[![시연영상](https://img.youtube.com/vi/ZylFNa6sgBA/5.jpg)](https://www.youtube.com/watch?v=ZylFNa6sgBA)<br>
+[![시연영상](https://img.youtube.com/vi/ZylFNa6sgBA/0.jpg)](https://www.youtube.com/watch?v=ZylFNa6sgBA)<br>
 <br>
 
 ### Difficult Point.:sweat_smile:
