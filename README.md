@@ -84,4 +84,4 @@ private float Area() {
 <br>
 
 ### Documents.:book:
-[프로젝트 관련문서](https://github.com/tlagmltjq11/TeamProject/tree/master/Documents)
+[프로젝트 관련문서](https://github.com/tlagmltjq11/Capston_Documents)
