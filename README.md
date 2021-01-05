@@ -75,6 +75,25 @@ Unity를 이용해 가상의 집을 구성하고, 가구를 배치해 볼 수 �
 <br>
 
 ### Pictures
+로그인 화면
+![login](https://user-images.githubusercontent.com/43705434/103642019-ea9fe180-4f95-11eb-8d92-2b825e6a80d0.png)
+<br>
+
 홈 화면
 ![home](https://user-images.githubusercontent.com/43705434/103642017-e96eb480-4f95-11eb-9a14-c69547f0bd75.png)
+<br>
 
+가구 리스트 화면
+![list](https://user-images.githubusercontent.com/43705434/103642018-ea9fe180-4f95-11eb-9e13-f5356d695b27.png)
+<br>
+
+장바구니 화면
+![cart](https://user-images.githubusercontent.com/43705434/103642021-eb387800-4f95-11eb-9f77-2fcbe7b6b97c.png)
+<br>
+
+바닥재 선택 화면
+![floorSelect](https://user-images.githubusercontent.com/43705434/103642027-ebd10e80-4f95-11eb-9d71-223860f800a9.png)
+<br>
+
+인테리어 완성 화면
+![complete](https://user-images.githubusercontent.com/43705434/103642024-eb387800-4f95-11eb-965a-15da2b31d984.png)
