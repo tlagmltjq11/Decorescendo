@@ -27,7 +27,7 @@
 Unity
 
 ### Video.:video_camera:
-*클릭하세요.*<br>
+*클릭하세요. (내레이션있습니다!)*<br>
 [![시연영상](https://img.youtube.com/vi/ZylFNa6sgBA/0.jpg)](https://www.youtube.com/watch?v=ZylFNa6sgBA)<br>
 <br>
 
