@@ -15,7 +15,7 @@
 <br>
 
 ### About Dev.:nut_and_bolt:
-1. *Unity* : 가구를 배치해 볼 수 있는 프로젝트를 제작 후 WebGL로 빌드하여 Web에서 구동시킬 수 있도록 했습니다.
+1. *Unity* : 가구를 배치해 볼 수 있는 프로젝트를 제작 후 WebGL로 빌드하여 Web에서 구동시킬 수 있도록 했습니다.<br>
 -> Unity에서는 JavaScript코드를 Plugins에 포함시켜 Web에 Json데이터를 전송했고, Web에서는 SendMessage를 사용해서 Unity에 Json데이터를 전송했습니다.
 2. *SketchUp* : 실제 가구의 3D모델링을 제작해보았습니다.
 3. *Spring* : 프레임워크를 사용하여 Web 개발을 효율적으로 진행 할 수 있었습니다.
