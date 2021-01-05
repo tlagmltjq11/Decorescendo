@@ -69,6 +69,7 @@ Unity를 이용해 가상의 집을 구성하고, 가구를 배치해 볼 수 �
 
 좀 더 완성도있는 결과물을 선보이지 못한것에 큰 아쉬움이 남지만, 굉장히 재미있게 즐기면서 진행할 수 있었던 수업이었다고 생각된다.
 <br>
+<br>
 
 ### Documents.:book:
 [프로젝트 관련문서](https://github.com/tlagmltjq11/Capston_Documents)
