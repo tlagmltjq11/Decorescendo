@@ -80,5 +80,5 @@ Unity 엔진에 대해서 많은 것을 알 수 있게 돼서, 굉장히 재미�
 ![floorSelect](https://user-images.githubusercontent.com/43705434/103642027-ebd10e80-4f95-11eb-9d71-223860f800a9.png)
 <br>
 
-인테리어 완성 화면
+인테리어 완료 화면
 ![complete](https://user-images.githubusercontent.com/43705434/103642024-eb387800-4f95-11eb-965a-15da2b31d984.png)
