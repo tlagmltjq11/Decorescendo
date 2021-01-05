@@ -14,15 +14,13 @@
 <br>
 
 ### About Dev.:nut_and_bolt:
-1. DataBase(MySQL) : 이전에 작업했던 모든 오브젝트들의 prefab, transform, rotation 들을 Json으로 변환하여 DB에 저장하기 위해 로컬 DB를 생성함. 
-계정에 담겨져 있는 방 정보를 가져와 이전에 작업한 인테리어 내용을 불러온다.
-2. Unity
-3. SketchUp
-4. Spring
-5. Jsoup 라이브러리를 활용하여 데이터 크롤링
-6. JQuery의 Ajax를 이용한 비동기통신
-7. Mybatis를 사용하여 편의성 및 간결성 보장
-8. HTML, CSS, JavaScript를 사용한 Front 구축
+1. *Spring* : 프레임워크를 사용하여 Web 개발을 효율적으로 진행 할 수 있었습니다.
+2. *Mybatis* : DB접근에 있어, 편의성 및 간결성을 보장했습니다.
+3. JQuery의 Ajax를 이용한 비동기통신
+4. *Data crawling* : Jsoup 라이브러리를 활용하여 실제 가구정보를 받아왔습니다.
+5. *DataBase(MySQL)* : 이전에 작업했던 인테리어의 모든 정보를 Json으로 변환하여 DB에 저장하기 위해 로컬 DB를 운영했습니다.
+6. *Unity* : 가구를 배치해 볼 수 있는 프로젝트를 제작 후 WebGL로 빌드하여 Web에서 구동시킬 수 있도록 했습니다.
+7. *SketchUp* : 실제 가구의 3D모델링을 제작해보았습니다.
 
 ### My Part.:computer:
 Unity
