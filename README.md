@@ -20,6 +20,7 @@
 4. *Data crawling* : Jsoup 라이브러리를 활용하여 실제 가구정보를 받아왔습니다.
 5. *DataBase(MySQL)* : 이전에 작업했던 인테리어의 모든 정보를 Json으로 변환하여 DB에 저장하기 위해 로컬 DB를 운영했습니다.
 6. *Unity* : 가구를 배치해 볼 수 있는 프로젝트를 제작 후 WebGL로 빌드하여 Web에서 구동시킬 수 있도록 했습니다.
+-> Unity에서는 JavaScript코드를 Plugins에 포함시켜 Web에 Json데이터를 전송했고, Web에서는 SendMessage를 사용해서 Unity에 Json데이터를 전송했습니다.
 7. *SketchUp* : 실제 가구의 3D모델링을 제작해보았습니다.
 
 ### My Part.:computer:
