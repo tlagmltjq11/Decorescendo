@@ -74,7 +74,7 @@ Unity를 이용해 가상의 집을 구성하고, 가구를 배치해 볼 수 �
 [프로젝트 관련문서](https://github.com/tlagmltjq11/Capston_Documents)
 <br>
 
-### Pictures
+### Pictures:camera:
 로그인 화면
 ![login](https://user-images.githubusercontent.com/43705434/103642019-ea9fe180-4f95-11eb-8d92-2b825e6a80d0.png)
 <br>
