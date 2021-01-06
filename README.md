@@ -49,8 +49,10 @@ __Unity를 이용해 가상의 집을 구성하고, 가구를 배치해 볼 수 
 
 <br>
 
-### What I learned
+### What I learned:punch:
 동적로드, Raycast, Coroutine, 내-외적, Material, Texture, Shader, Mesh 등의 개념을 익힐 수 있었습니다.
+
+<br>
 
 ### Feeling.:pencil:
 Unity 엔진에 대해서 많은 것을 알 수 있게 돼서, 굉장히 재미있고 유익한 시간이었습니다. 더군다나 팀원들이 너무나 훌륭하게 각자의 파트를 소화해준 탓에, 우수상을 받게 되어 개인적으로 가장 기억에 남는 교내 팀 활동이었습니다.
