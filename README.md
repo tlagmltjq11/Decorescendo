@@ -49,8 +49,8 @@ __Unity를 이용해 가상의 집을 구성하고, 가구를 배치해 볼 수 
 
 <br>
 
-### What I learned:punch:
-동적로드, Raycast, Coroutine, 내-외적, Material, Texture, Shader, Mesh 등의 개념을 익힐 수 있었습니다.
+### What I learned.:punch:
+동적로드, Raycast, Coroutine, 내-외적, Material, Texture, Shader, Mesh 등의 기본적인 개념을 익힐 수 있었습니다.
 
 <br>
 
