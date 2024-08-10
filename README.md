@@ -6,7 +6,7 @@
 <br>
 <br>
 
-### About Project.:two_men_holding_hands:
+### About Project.
 데코레센도는 가상의 집을 구성하고, 그 안에 실제 가구들의 3D모델링을 배치해보면서, 실제로 예상되는 모습을 미리 간접적으로 체험해 볼 수 있는 프로젝트 입니다.
 또한 비슷한 디자인을 가진 가구들의 가격비교를 할 수 있는 기능도 포함되어 있습니다.<br>
 
@@ -14,7 +14,7 @@
 가격비교를 통해 합리적인 소비로 지출을 아낄 수 있고, 가구를 배치하고 난 후의 모습을 미리 볼 수 있으므로 환불⦁반품률을 줄이는 효과를 예상하고 있습니다.<br>
 <br>
 
-### About Dev.:nut_and_bolt:
+### About Dev.
 1. *Unity* : 가구를 배치해 볼 수 있는 프로젝트를 제작 후 WebGL로 빌드하여 Web에서 구동시킬 수 있도록 했습니다.<br>
 -> Unity에서는 JavaScript코드를 Plugins에 포함시켜 Web에 Json데이터를 전송했고, Web에서는 SendMessage를 사용해서 Unity에 Json데이터를 전송했습니다.
 2. *Spring* : 프레임워크를 사용하여 Web 개발을 효율적으로 진행 할 수 있었습니다.
@@ -24,16 +24,16 @@
 6. *DataBase(MySQL)* : 이전에 작업했던 인테리어의 모든 정보를 Json으로 변환하여 DB에 저장하기 위해 로컬 DB를 운영했습니다.
 <br>
 
-### My Part.:computer:
+### My Part.
 __Unity를 이용해 가상의 집을 구성하고, 가구를 배치해 볼 수 있는 프로젝트를 도맡아 개발했습니다.__<br>
 <br>
 
-### Video.:video_camera:
+### Video.
 *클릭해주세요.* ***(내레이션있습니다!)***<br>
 [![시연영상](https://img.youtube.com/vi/ZylFNa6sgBA/0.jpg)](https://www.youtube.com/watch?v=ZylFNa6sgBA)<br>
 <br>
 
-### Difficult Point.:sweat_smile:
+### Difficult Point.
 * 사용자가 찍은 좌표들을 기반으로 동적으로 다각형을 생성해 바닥을 만들어주어야하는 문제가 있었는데, 당시 구현에 너무 큰 어려움을 겪었습니다.
 그리하여 [오픈소스](https://gist.github.com/N-Carter/12242476dc4e4036db34)를 찾아보니, 다음과같이 제가 원하는 기능을 구현해둔 오픈소스를 찾을 수 있었습니다.
 이를 통해, 바닥을 생성해 줄 수 있었습니다.
@@ -49,22 +49,22 @@ __Unity를 이용해 가상의 집을 구성하고, 가구를 배치해 볼 수 
 
 <br>
 
-### What I learned.:punch:
+### What I learned.
 UGUI, 동적로드, Raycast, Coroutine, 내-외적, Material, Texture, Shader, Mesh 등의 기본적인 개념을 익힐 수 있었습니다.
 
 <br>
 
-### Feeling.:pencil:
+### Feeling.
 Unity 엔진의 많은 기능을 알 수 있게 돼서, 굉장히 유익한 시간이었습니다. 더군다나 팀원들이 너무나 훌륭하게 각자의 파트를 소화해준 탓에, 우수상을 받게 되어 개인적으로 가장 기억에 남는 교내 팀 활동이었습니다.
 <br>
 <br>
 
-### Documents.:book:
+### Documents.
 [프로젝트 관련문서](https://github.com/tlagmltjq11/Capston_Documents)
 <br>
 <br>
 
-### Pictures.:camera:
+### Pictures.:
 로그인 화면
 ![login](https://user-images.githubusercontent.com/43705434/103642019-ea9fe180-4f95-11eb-8d92-2b825e6a80d0.png)
 <br>
